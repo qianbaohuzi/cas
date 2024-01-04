@@ -39,3 +39,7 @@ tasks.named('asciidoctor') {
 	inputs.dir snippetsDir
 	dependsOn test
 }
+tasks.named("bootBuildImage") {
+	environment["HTTP_PROXY"] = "http://127.0.0.1:7891"
+	environment["HTTPS_PROXY"] = "https://127.0.0.1:7891"
+}
