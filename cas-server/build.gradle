@@ -14,6 +14,14 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
+
+// Spring Boot插件提供了bootJar任务，用于构建可执行的JAR文件
+bootJar {
+    launchScript() // 可选：包含一个启动脚本，使得JAR可以直接通过`java -jar`命令运行
+    archiveFileName = "cas-server.jar"
+    // 可以根据需要自定义JAR文件的名称
+}
+
 // 可能的其他配置，如测试、资源过滤、打包等
 tasks.test {
     useJUnitPlatform()
