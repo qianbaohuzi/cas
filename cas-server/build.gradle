@@ -1,0 +1,20 @@
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'java'
+}
+
+group = "com.huzi.cas.server"
+version = "0.0.1-SNAPSHOT"
+
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+}
+// 可能的其他配置，如测试、资源过滤、打包等
+tasks.test {
+    useJUnitPlatform()
+}

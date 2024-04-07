@@ -1,1 +1,3 @@
-rootProject.name = 'sso'
+rootProject.name = 'cas'
+include 'cas-server'
+
